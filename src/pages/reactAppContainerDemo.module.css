@@ -1,41 +1,84 @@
 .container {
-    background-color: #74EBD5;
-    background-image: linear-gradient(25deg, #74EBD5 0%, #cbd0e7 100%);
     height: 100%;
     min-height: 100%;
     display: grid;    
     grid-template-areas:    
     'header header header header'
-    'options main main main';
-    grid-template-rows: 200px auto;
+    'json json options options'
+    'main main main main';
+    grid-template-rows: 75px 400px auto;
+    grid-auto-columns: 1fr;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-.optionsContainer {
-    grid-area: options;
+.jsonContainer {
+    grid-area: json;    
+    padding: 20px;        
     height: 100%;
-    padding: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 100%;
     border-style: solid;
-    border-width: 1px;
+    border-width: 0px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-color: aquamarine;
+}
+
+.optionsContainer {
+    grid-area: options;
+    height: 100%;    
+    overflow-y: scroll;
+    margin-right: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-color: aquamarine;
+    
 }
 
 .mainContainer {
     grid-area: main;
     height: 100%;
-    width: 100%;
-    padding: 10px;
-    border-style: solid;
-    border-width: 1px;
+    width: 100%;    
 }
 
 .headerContainer {
     grid-area: header;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 10px;
-    border-style: solid;
-    border-width: 1px;
+    transition: background-color 3s ease-in-out, color 3s ease-in-out;    
+}
+
+.headerText {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.subHeaderText {
+    text-align: left;
+    color: black;    
+    font-size: 1rem;    
+    border-bottom: 2px solid;
+}
+
+.subHeaderContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.jsonEditorContainer {
+    height: 100%;
 }
