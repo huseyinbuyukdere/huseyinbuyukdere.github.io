@@ -30,7 +30,6 @@
 .optionsContainer {
     grid-area: options;
     height: 100%;    
-    overflow-y: scroll;
     margin-right: 10px;
     padding: 20px;
     box-sizing: border-box;

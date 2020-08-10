@@ -9,10 +9,10 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
         <Switch>
-            <Route  path="/react-app-container">
+            <Route  path={process.env.PUBLIC_URL +"/react-app-container"}>
                 <ReactAppContainerDemo />
             </Route>
-            <Redirect from='*' to='/react-app-container' />
+            <Redirect from='*' to={process.env.PUBLIC_URL +'/react-app-container'} />
         </Switch>      
     </Router>
   );
